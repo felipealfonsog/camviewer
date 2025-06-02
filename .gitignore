@@ -1,0 +1,10 @@
+node_modules/
+public/cam1/
+public/cam2/
+public/cam3/
+*.log
+.DS_Store
+*.ts
+*.m3u8
+*.tmp
+*.swp

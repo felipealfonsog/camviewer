@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CamViewer - CCTV Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 1rem;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1rem;
+    }
+    .cam {
+      background: #222;
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+    video {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .ip-info {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>CamViewer</h1>
+  <div class="ip-info">Server: {{IP_ADDRESS}}:8080</div>
+  <div class="grid">
+    <div class="cam">
+      <h2>Camera 1</h2>
+      <video id="video1" controls autoplay muted></video>
+    </div>
+    <div class="cam">
+      <h2>Camera 2</h2>
+      <video id="video2" controls autoplay muted></video>
+    </div>
+    <div class="cam">
+      <h2>Camera 3</h2>
+      <video id="video3" controls autoplay muted></video>
+    </div>
+  </div>
+
+  <script>
+    function loadStream(id, url) {
+      const video = document.getElementById(id);
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+      }
+    }
+    loadStream('video1', 'cam1/index.m3u8');
+    loadStream('video2', 'cam2/index.m3u8');
+    loadStream('video3', 'cam3/index.m3u8');
+  </script>
+</body>
+</html>
