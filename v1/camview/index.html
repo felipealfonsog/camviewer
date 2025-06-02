@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mis cámaras</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <h2>Cámara 1</h2>
+  <video id="video1" width="480" height="270" controls autoplay muted></video>
+  <h2>Cámara 2</h2>
+  <video id="video2" width="480" height="270" controls autoplay muted></video>
+  <h2>Cámara 3</h2>
+  <video id="video3" width="480" height="270" controls autoplay muted></video>
+
+  <script>
+    function loadStream(videoId, url) {
+      const video = document.getElementById(videoId);
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+      }
+    }
+
+    loadStream('video1', 'cam1/index.m3u8');
+    loadStream('video2', 'cam2/index.m3u8');
+    loadStream('video3', 'cam3/index.m3u8');
+  </script>
+</body>
+</html>
