@@ -6,7 +6,14 @@ CamViewer is a simple web-based CCTV dashboard that allows you to stream multipl
 
 [![View Screenshots](https://img.shields.io/badge/View-Screenshots-blue)](#)
 
+<!--
 ![Screenshot of the application interface](images/CamViewer_CCTV_Dashboard.png)
+-->
+
+<p align="center">
+  <img src="./images/CamViewer_CCTV_Dashboard.pngg" alt="Screenshot" width="400" height="350">
+</p>
+
 
 #
 
