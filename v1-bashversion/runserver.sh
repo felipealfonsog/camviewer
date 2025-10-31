@@ -2,7 +2,7 @@
 
 # --- CONFIGURACIÓN ---
 USER="admin"
-PASS="gdR2NgvCsAJxJ2Y0UrFJ"
+PASS="xxxxxxxxxxxxxxxxxx"
 
 IP1="192.168.100.31"
 IP2="192.168.100.74"

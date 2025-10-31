@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER="admin"
-PASS="gdR2NgvCsAJxJ2Y0UrFJ"
+PASS="xxxxxxxxx"
 
 IP1="192.168.100.84"
 IP2="192.168.100.74"
