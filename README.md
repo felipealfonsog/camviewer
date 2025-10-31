@@ -2,7 +2,13 @@
 
 CamViewer is a simple web-based CCTV dashboard that allows you to stream multiple RTSP camera feeds through a clean HLS interface. It uses FFmpeg for transcoding and a Node.js backend to serve the interface and handle stream startup. It is compatible with Arch Linux and macOS (including Apple Silicon). The frontend is optimized for desktop and Android TV browsers.
 
----
+#### Screenshots
+
+[![View Screenshots](https://img.shields.io/badge/View-Screenshots-blue)](#)
+
+![Screenshot of the application interface](images/CamViewer_CCTV_Dashboard.png)
+
+#
 
 ## 📦 Requirements
 
