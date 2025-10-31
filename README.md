@@ -11,7 +11,7 @@ CamViewer is a simple web-based CCTV dashboard that allows you to stream multipl
 -->
 
 <p align="center">
-  <img src="./images/CamViewer_CCTV_Dashboard.pngg" alt="Screenshot" width="400" height="350">
+  <img src="images/CamViewer_CCTV_Dashboard.pngg" alt="Screenshot" width="400" height="350">
 </p>
 
 
